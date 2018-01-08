@@ -57,6 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BalanceReader.cs" />
+    <Compile Include="BalanceReaderFactory.cs" />
+    <Compile Include="Events\AlphanumericRecordEventArgs.cs" />
+    <Compile Include="Events\BalanceReaderEventArgs.cs" />
+    <Compile Include="Events\BalanceReaderEventArgsFactory.cs" />
+    <Compile Include="Events\DecimalRecordEventArgs.cs" />
+    <Compile Include="Events\HexadecimalRecordEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -69,6 +76,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Events\SignedDecimalRecordEventArgs.cs" />
+    <Compile Include="ReadRecordAPDU.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -105,10 +114,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Downloads\pcsc-sharp-RELEASE_3_5_1\pcsc-sharp\pcsc-sharp.csproj">
+    <ProjectReference Include="..\pcsc-sharp\pcsc-sharp\pcsc-sharp.csproj">
       <Project>{459E0FB4-AF42-4123-9923-7EA68CA01B09}</Project>
       <Name>pcsc-sharp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
