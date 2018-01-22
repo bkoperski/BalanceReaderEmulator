@@ -12,7 +12,7 @@ namespace BalanceReaderEmulator {
         private BalanceReaderEventArgsFactory eventFactory;
         public event EventHandler NewRecordEventHandlers;
 
-        public BalanceReader(ISCardContext context, String readerName) : base(context, readerName, SCardShareMode.Exclusive, SCardProtocol.Any, false) {
+        public BalanceReader(ISCardContext context, String readerName) : base(context, readerName, SCardShareMode.Shared, SCardProtocol.Any, false) {
             currentRecord = 0;
             eventFactory = new BalanceReaderEventArgsFactory();
         }

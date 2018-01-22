@@ -1,3 +1,4 @@
 [submodule "pcsc-sharp"]
 	path = pcsc-sharp
 	url = https://github.com/danm-de/pcsc-sharp.git
+	ignore = untracked
